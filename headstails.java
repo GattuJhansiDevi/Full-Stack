@@ -23,16 +23,16 @@ public class headstails {
        
         String winner = "";
         if (count1 > count2) {
-            winner = "kareena";
+            winner = "player1";
         } else if (count2 > count1) {
-            winner = "jhansi";
+            winner = "player2";
         } else {
             winner = "Tie";
         }
         
        
-        System.out.println("kareena: " + IntStream.of(results1).mapToObj(result -> result == 1 ? "H" : "T").reduce("", String::concat));
-        System.out.println("jhansi: " + IntStream.of(results2).mapToObj(result -> result == 1 ? "H" : "T").reduce("", String::concat));
+        System.out.println("player1: " + IntStream.of(results1).mapToObj(result -> result == 1 ? "H" : "T").reduce("", String::concat));
+        System.out.println("player2: " + IntStream.of(results2).mapToObj(result -> result == 1 ? "H" : "T").reduce("", String::concat));
         System.out.println("Winner: " + winner);
     }
 }
